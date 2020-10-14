@@ -41,7 +41,7 @@ function sayHello(person, age) {
     console.log(greetings+' '+declearAge)
 }
 
-/*function calculateGrade(score) {
+function calculateGrade(score) {
     var grade = ''
     if (score >= 70) {
         grade = 'A'
@@ -54,35 +54,41 @@ function sayHello(person, age) {
     }else {
         grade = 'F'
     }
-    console.log(grade)
-}*/
-
-function calculateGrade(score) {
-
-    if (score >= 70) {
-        return 'A'
-    }
-
-    if(score >= 60 && score < 70) {
-        return 'B'
-    }
-
-    if(score > 49 && score < 60) {
-        return 'C'
-    }
-
-    if(score >= 45 && score < 50) {
-        return 'D'
-    }
-
-    return 'F'
-
+    isPass(grade)
 }
+
+function isPass(grade) {
+    let isPass = grade === 'F' ? 'Failed' : 'Pass'
+
+    console.log(isPass)
+}
+
+// function calculateGrade(score) {
+
+//     if (score >= 70) {
+//         return 'A'
+//     }
+
+//     if(score >= 60 && score < 70) {
+//         return 'B'
+//     }
+
+//     if(score > 49 && score < 60) {
+//         return 'C'
+//     }
+
+//     if(score >= 45 && score < 50) {
+//         return 'D'
+//     }
+
+//     return 'F'
+
+// }
 
 // sayHello('James', 38)
 // sayHello(person, age)
 // sayHello('Blessing Philips', 25)
 let score = 67
-let isPass = calculateGrade(score) === 'F' ? 'Failed' : 'Pass'
 
-console.log(isPass)
+calculateGrade(score)
+
